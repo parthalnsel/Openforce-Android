@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "192642366353",
+    "firebase_url": "https://openforce-production-b12c0.firebaseio.com",
+    "project_id": "openforce-production-b12c0",
+    "storage_bucket": "openforce-production-b12c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192642366353:android:8db9835cf1e7b950",
+        "android_client_info": {
+          "package_name": "com.openforce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192642366353-cqqehj7c6n5jshdsrgebrbc2b2enobh9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.openforce",
+            "certificate_hash": "ea524f4bafd1fb7060b42021f37b127cdc484b6a"
+          }
+        },
+        {
+          "client_id": "192642366353-q738pq9aehaahr0tqqlad5d4c5mto9dv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCznVDX8MeJjBrjHjQFIfCoYX7ulOlr9W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192642366353-q738pq9aehaahr0tqqlad5d4c5mto9dv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

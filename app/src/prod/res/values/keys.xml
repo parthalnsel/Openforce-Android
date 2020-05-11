@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cloudinary_name">openforce</string>
+    <string name="cloudinary_preset">of-preset</string>
+    <string name="privacy_link">https://openforce-production.firebaseapp.com/assets/privacy_of.pdf</string>
+    <string name="terms_link">https://openforce-production.firebaseapp.com/assets/terms_of.pdf</string>
+</resources>

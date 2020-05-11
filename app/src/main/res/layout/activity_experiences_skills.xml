@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center_vertical"
+        android:background="@color/skill_blue">
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_weight="0.9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="17dp"
+            android:hint="@string/search_roles_expertise"
+            android:textColor="@color/white_50"
+            android:backgroundTint="#80ffffff"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:textColorHint="@color/white_50" />
+
+        <ImageView
+            android:id="@+id/close_screens"
+            android:layout_weight="0.1"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_white_24dp"/>
+
+        <ImageView
+            android:id="@+id/close_screen"
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_white_24dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:id="@+id/roles_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/picking_role_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/picking_role"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="40dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/most_wanted_jobs_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/most_wanted_jobs"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="40dp"
+                android:textColor="@color/white_62"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/roles_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/add_experience_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:paddingBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="21dp"
+                    android:gravity="center|end">
+
+                    <LinearLayout
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/role_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#de000000"
+                            tools:text="Electrician"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="#de827f7f"
+                            android:text="@string/skill_level"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/day_rate_layout"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center|end">
+                        <TextView
+                            android:id="@+id/currency_symbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pound_symbol"
+                            android:textColor="#61000000"
+                            />
+                        <EditText
+                            android:id="@+id/day_rate_edittext"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:maxLength="3"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:digits="0123456789"
+                            android:textColor="#61000000"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/per_day"
+                            android:textColor="#61000000"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ir.neo.stepbarview.StepBarView
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sbv_steps_line_margin_left="0dp"
+                    app:sbv_steps_line_margin_right="0dp"
+                    app:sbv_steps_text_size="10sp"
+                    app:sbv_steps_size="16dp"
+                    app:sbv_steps_reached_colors="@color/sun_yellow"
+                    app:sbv_steps_line_reached_colors="@color/sun_yellow"
+                    app:sbv_steps_line_unreached_colors="#61000000"
+                    app:sbv_steps_unreached_colors="#61000000"
+                    app:sbv_steps_text_color="#fff"
+                    app:sbv_max_count="10"
+                    android:paddingLeft="21dp"
+                    android:paddingRight="21dp"
+                    app:sbv_show_step_stroke="false"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/sun_yellow"
+                    android:layout_height="@dimen/button_height">
+                    <Button
+                        android:id="@+id/done_button"
+                        android:layout_width="match_parent"
+                        style="@style/Button.Yellow"
+                        android:background="@null"
+                        android:textAllCaps="true"
+                        android:text="@string/done" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

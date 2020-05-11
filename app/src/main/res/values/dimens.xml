@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="welcome_pager_margin">16dp</dimen>
+    <dimen name="map_location_width">216dp</dimen>
+    <dimen name="map_location_height">72dp</dimen>
+    <dimen name="map_location_corner_radius">15dp</dimen>
+    <dimen name="padding_top_item_past_job">18dp</dimen>
+    <dimen name="border_profile">1dp</dimen>
+    <dimen name="avatar_employee_size">56dp</dimen>
+    <dimen name="avatar_employee_small_size">32dp</dimen>
+    <dimen name="medium_avatar_size">40dp</dimen>
+
+</resources>

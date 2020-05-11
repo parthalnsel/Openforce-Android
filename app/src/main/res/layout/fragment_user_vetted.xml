@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sun_yellow"
+    tools:context=".activity.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/avatar_employee"
+                android:layout_width="48dp"
+                android:visibility="gone"
+                android:layout_height="@dimen/avatar_employee_size"
+                android:src="@color/black" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="48dp"
+                android:src="@drawable/ic_account_circle_black_24dp"
+                android:layout_height="@dimen/avatar_employee_size"
+                android:id="@+id/avatar_circle_employee"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="9dp"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_layout"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:id="@+id/employee_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Label.SansSerifMedium"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        tools:text="John Smith"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RatingBar
+                            android:id="@+id/rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:numStars="5"
+                            android:stepSize="0.1"
+                            android:progressTint="@color/black"
+                            android:secondaryProgressTint="@android:color/transparent"
+                            android:progressBackgroundTint="@android:color/transparent"
+                            android:layout_marginEnd="4dp"
+                            android:isIndicator="true"/>
+
+                        <TextView
+                            android:id="@+id/employee_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            tools:text="5.0"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/my_balance_layout"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="YOU'VE MADE"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+
+                        android:orientation="horizontal">
+                        <TextView
+                            android:textColor="@color/black"
+                            style="@style/Label.SansSerifMedium"
+                            android:textSize="17dp"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="£ "/>
+                        <TextView
+                            android:text="120.00"
+                            android:textSize="17dp"
+                            android:id="@+id/balance_tv"
+                            android:textColor="@color/black"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            style="@style/Label.SansSerifMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="49dp"
+            android:layout_height="260dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+
+            android:layout_marginTop="32dp"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/past_job_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:clipToPadding="false"
+                android:elevation="2dp"
+
+                android:outlineProvider="bounds"
+                tools:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/progress_past_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/blue"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:id="@+id/no_past_job_layout"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#99000000"
+                        android:textSize="12sp"
+                        android:text="No Job History"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#99000000"
+                        android:text="@string/search_for_job"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chevron_right_black_24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/logout_btn"
+            android:layout_gravity="center"
+            android:background="@color/sun_yellow"
+            android:layout_width="match_parent"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="50dp"
+            android:shadowColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

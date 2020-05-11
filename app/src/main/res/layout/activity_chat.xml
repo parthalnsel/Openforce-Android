@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#f9f8f6"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/header_chat"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:layout_height="86dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            
+            <ImageView
+                android:id="@+id/logo_employer"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                />
+
+            <TextView
+                android:id="@+id/employer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Good design and Build" />
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loader_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_below="@id/header_chat">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/footer_layout"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/review_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/white_rounded"
+                    android:layout_marginBottom="9dp"
+                    android:paddingEnd="9dp"
+                    android:paddingStart="9dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal"
+                    android:textColor="#191a1a"
+                    android:text="@string/rate_time"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:elevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="24dp"
+                        android:background="@color/white"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/rate_card_title"
+                            style="@style/MaterialLightBody2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/review_title"/>
+
+                        <RatingBar
+                            android:id="@+id/rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_height="48dp"
+                            android:numStars="5"
+                            android:stepSize="0.5"
+                            android:progressDrawable="@drawable/rating_bar_chat"
+                            android:layout_marginTop="16dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/review_button"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginRight="21dp"
+                    style="@style/Button.Yellow"
+                    android:text="@string/done"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/request_amount_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_request_amout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/white_rounded"
+                    android:layout_marginBottom="9dp"
+                    android:paddingEnd="9dp"
+                    android:paddingStart="9dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal"
+                    android:textColor="#191a1a"
+                    android:text="@string/rate_time"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:elevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="24dp"
+                        android:background="@color/white"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/request_withdraw_amount_tv"
+                            style="@style/MaterialLightBody3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Please request for withdraw to get your amount to be credited in your stripe account"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/request_withdraw_button"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginRight="21dp"
+                    style="@style/Button.Yellow"
+                    android:text="Request Withdraw"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/end_job_button"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_end_job" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/checkin_button"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_checkin"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <com.openforce.widget.EndlessRecyclerView
+            android:id="@+id/message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/footer_layout">
+
+        </com.openforce.widget.EndlessRecyclerView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

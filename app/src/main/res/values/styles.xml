@@ -1,0 +1,220 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Button.Yellow" parent="@style/Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/sun_yellow</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">@style/Label.SansSerifMedium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Label" />
+
+    <style name="Label.SansSerifMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Label.SansSerif">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Label.SansSerifLight">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="Label.SansSerifMedium.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="MaterialDarkTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="MaterialDesktopDarkBody1">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="MaterialLightHeadline">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="MaterialLightSubhead">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="MaterialLightCaption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="MaterialLightBody2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="MaterialLightBody3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+
+    <style name="MaterialLightBody2Secondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+        <item name="android:textColor">#8a000000</item>
+    </style>
+
+    <style name="MaterialLightTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="MaterialLightBody1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="LightSubhead1Secondary">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#8a000000</item>
+    </style>
+
+    <style name="LightTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="MaterialLightSubheadSecondary">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#8a000000</item>
+    </style>
+
+    <style name="MaterialLightSubheadDisabled">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#61000000</item>
+    </style>
+
+    <style name="LightBody1Secondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">#8b000000</item>
+    </style>
+
+    <style name="LightHeadline">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="DarkSubhead">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="LightDisplay4">
+        <item name="android:textSize">112sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#de000000</item>
+    </style>
+
+    <style name="StandardEditText">
+        <item name="android:backgroundTint">@color/sun_yellow</item>
+        <item name="android:textCursorDrawable">@drawable/yellow_cursor</item>
+        <item name="colorControlNormal">@color/sun_yellow</item>
+        <item name="colorControlActivated">@color/sun_yellow</item>
+        <item name="colorControlHighlight">@color/sun_yellow</item>
+    </style>
+
+    <style name="PinEditText">
+        <item name="android:backgroundTint">#61ffffff</item>
+        <item name="android:textCursorDrawable">@drawable/grey_cursor</item>
+        <item name="colorControlNormal">#61ffffff</item>
+        <item name="colorControlActivated">#61ffffff</item>
+        <item name="colorControlHighlight">#61ffffff</item>
+        <item name="android:textColor">#61ffffff</item>
+    </style>
+
+    <dimen name="button_height">56dp</dimen>
+
+    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">#f4511e</item>
+        <item name="android:progressTint">#388e3c</item>
+        <item name="android:colorControlActivated">#c51162</item>
+    </style>
+
+</resources>

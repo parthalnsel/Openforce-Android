@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SetMapAreaActivity">
+
+    <RelativeLayout
+        android:elevation="10dp"
+        android:id="@+id/navigation_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/dark_blue">
+
+            <fragment
+
+                android:id="@+id/place_autocomplete_fragment"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:background="@color/dark_blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/white_50"
+                android:id="@+id/ext_search"
+                android:textSize="16sp"
+                android:textColorHint="@color/white_50"
+                android:hint="Search area of work"
+                android:layout_marginLeft="26dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"/>
+
+
+            <ImageView
+                android:id="@+id/img_cross"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/location_cross"
+                android:layout_alignParentRight="true"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <View
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/white_50"
+                android:layout_below="@+id/ext_search"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+            </View>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/navigation_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_set">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_range"
+        android:background="@drawable/set_range_bg"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/rl_set"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/txt_job"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:textColor="#de000000"
+            android:text="Display jobs within"
+            />
+        <TextView
+            android:id="@+id/txt_miles"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#de000000"
+            android:text="20.0 miles"
+            />
+
+        <SeekBar
+            android:layout_below="@+id/txt_job"
+            android:id="@+id/seekbar_miles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:max="100"
+            android:progress="40"
+            android:progressTint="#121d7a"
+            android:thumbTint="#121d7a"
+            />
+
+    </RelativeLayout>
+    <Button
+        android:text="SET"
+        android:id="@+id/rl_set"
+        android:background="@color/sun_yellow"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+    </Button>
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.HomeActivity"
+    android:background="@color/dark_blue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end">
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_white_24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:background="@drawable/secure_logo"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Label.SansSerifMedium.Title"
+        android:gravity="center_horizontal"
+        android:text="@string/secure_account"/>
+
+    <LinearLayout
+        android:id="@+id/register_phone_number_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121d7a"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_smartphone_black_24dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerifMedium"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="@string/register_phone_number"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerif"
+                android:textColor="#99ffffff"
+                android:textSize="12sp"
+                android:text="@string/need_phone_number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_white_24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secure_account_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121d7a"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock_black_24dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerifMedium"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="@string/set_login_pin"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerif"
+                android:textColor="#99ffffff"
+                android:textSize="12sp"
+                android:text="@string/pin_seemlessly"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_white_24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="25dp">
+        <Button
+            android:id="@+id/done_button"
+            style="@style/Button.Yellow"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:text="@string/done"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

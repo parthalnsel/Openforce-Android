@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/navigation_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/sun_yellow"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/title_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_pin"
+            android:textAlignment="center"
+            style="@style/Label.SansSerifMedium"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/navigation_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/dark_blue"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pin_input_1"
+            android:layout_width="30dp"
+            android:layout_marginEnd="3dp"
+            app:backgroundTint="@color/pin_edittext_colour"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:digits="0123456789"
+            android:gravity="center_horizontal"
+            android:theme="@style/PinEditText"
+            android:textColor="#61ffffff"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pin_input_2"
+            android:layout_width="30dp"
+            android:layout_marginEnd="3dp"
+            app:backgroundTint="@color/pin_edittext_colour"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:digits="0123456789"
+            android:gravity="center_horizontal"
+            android:textColor="#61ffffff"
+            android:theme="@style/PinEditText"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pin_input_3"
+            android:layout_width="30dp"
+            android:layout_marginEnd="3dp"
+            app:backgroundTint="@color/pin_edittext_colour"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:digits="0123456789"
+            android:gravity="center_horizontal"
+            android:textColor="#61ffffff"
+            android:theme="@style/PinEditText"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pin_input_4"
+            android:layout_width="30dp"
+            android:layout_marginEnd="3dp"
+            app:backgroundTint="@color/pin_edittext_colour"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:digits="0123456789"
+            android:gravity="center_horizontal"
+            android:textColor="#61ffffff"
+            android:theme="@style/PinEditText"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

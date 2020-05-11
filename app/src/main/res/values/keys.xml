@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cloudinary_name">firmastudio-co-uk</string>
+    <string name="cloudinary_preset">uglncfoq</string>
+    <string name="privacy_link">https://openforce-staging-309a1.firebaseapp.com/assets/privacy_of.pdf</string>
+    <string name="terms_link">https://openforce-staging-309a1.firebaseapp.com/assets/terms_of.pdf</string>
+</resources>

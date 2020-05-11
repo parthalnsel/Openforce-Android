@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.HomeActivity"
+    android:background="@color/dark_blue"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/close_button_frag_add_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close_white_24dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:background="@drawable/payment_image"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerifMedium.Title"
+                android:gravity="center_horizontal"
+                android:text="@string/vetting_add_payment"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+                android:id="@+id/get_paid_layout"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:id="@+id/profile_image_stripe_account"
+                        android:src="@drawable/payment_image"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.9"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="19dp"
+                            android:id="@+id/stripe_account_name_tv"
+                            android:textColor="@color/dark_grey"
+                            android:text="@string/get_paid_with_stripe"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/dark_grey"
+                            android:id="@+id/connect_stripe_setup_tv"
+                            android:text="@string/connect_setup_stripe"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--<Button-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="60dp"-->
+
+                    <!--android:layout_gravity="center"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:visibility="visible"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/open_button"
+                        android:id="@+id/stripe_btn"
+                        android:layout_height="70dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/login_diff_account_layout"
+                    android:weightSum="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:background="@drawable/stripe_connect_diff_account_bg"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:paddingLeft="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="To Connect a different account"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="login at"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Stripe.com"
+                                    android:layout_marginLeft="5dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/blue"
+                                    android:id="@+id/stripe_text_btn"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.2"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:rotation="-90"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/expand_more"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stripe_term"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/frag_add_payment_stripe_terms_tv"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:layout_gravity="center|bottom"
+                android:gravity="center|center_vertical"
+                >
+
+                <Button
+                    android:id="@+id/frag_add_payment_save_btn"
+                    style="@style/Button.Yellow"
+                    android:layout_width="match_parent"
+                    android:text="@string/save"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.HomeActivity"
+    android:background="@color/dark_blue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end">
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_white_24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:background="@drawable/identity_logo"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Label.SansSerifMedium.Title"
+        android:gravity="center_horizontal"
+        android:text="@string/identity_references"/>
+
+
+    <LinearLayout
+        android:id="@+id/add_cv_doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121d7a"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="2dp"
+            android:layout_width="21dp"
+            android:layout_height="28dp"
+            android:src="@drawable/cv_doc_cv"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerifMedium"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="Add CV document"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerif"
+                android:textColor="#99ffffff"
+                android:textSize="12sp"
+                android:text="Snap a picture of your CV and it instantly"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_white_24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_cscs_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121d7a"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:visibility="gone"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_width="32dp"
+            android:layout_height="21dp"
+            android:src="@drawable/cscs_card_ic"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerifMedium"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="Add CSCS card"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerif"
+                android:textColor="#99ffffff"
+                android:textSize="12sp"
+                android:text="Scan your CSCS card to add it to your profile"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_white_24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/add_email_references_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121d7a"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_width="24dp"
+            android:layout_height="18dp"
+            android:src="@drawable/email_ic"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerifMedium"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="@string/add_email_references"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Label.SansSerif"
+                android:textColor="#99ffffff"
+                android:textSize="12sp"
+                android:text="@string/previous_contact_emails"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_white_24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+        <Button
+            android:id="@+id/button_done"
+            style="@style/Button.Yellow"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:text="@string/done"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

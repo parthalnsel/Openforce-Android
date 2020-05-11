@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="32dp"
+    android:id="@+id/past_job_layout"
+    android:paddingEnd="32dp"
+    android:paddingBottom="18dp"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/job_role_employer_name"
+        style="@style/MaterialLightBody2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Labourer, Foster &amp; Partners"/>
+
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="#61000000"
+        android:lineSpacingExtra="4sp"
+        tools:text="12th March 2018 - 12th April 2019"
+        />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rated_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:progressTint="@color/black"
+                android:secondaryProgressTint="@android:color/transparent"
+                android:progressBackgroundTint="@android:color/transparent"
+                android:isIndicator="true"/>
+
+            <TextView
+                android:layout_marginStart="4dp"
+                android:id="@+id/rating_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                tools:text="5.0"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/not_rated_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:text="@string/not_rated"/>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="9dp"
+        android:background="#1e000000"/>
+</LinearLayout>

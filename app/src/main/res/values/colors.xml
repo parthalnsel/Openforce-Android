@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/dark_blue</color>
+    <color name="colorPrimaryDark">@color/blue</color>
+    <color name="colorAccent">@color/grey</color>
+    <color name="grey">#61000000</color>
+    <color name="sun_yellow">#fed91c</color>
+    <color name="yellow">#feda10</color>
+    <color name="dark_grey">#282929</color>
+    <color name="blue">#0c15b0</color>
+    <color name="skill_blue">#121d7a</color>
+    <color name="in_job_blue">#2229af</color>
+    <color name="dark_blue">#070d44</color>
+    <color name="white">@android:color/white</color>
+    <color name="black">#000000</color>
+    <color name="black_inactive">#1A000000</color>
+    <color name="vetting_body_color">#de000000</color>
+    <color name="title_vetting">#191a1a</color>
+    <color name="pin_edittext_colour">#61ffffff</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="orange">#ce4a00</color>
+    <color name="black_transparent">#99000000</color>
+    <color name="background_profile">#464647</color>
+    <color name="placeholder_border_profile">#5e5211</color>
+    <color name="white_62">#62ffffff</color>
+    <color name="list_job_black">#333333</color>
+    <color name="list_job_place">#757575</color>
+    <color name="list_job_view">#e5e5e5</color>
+
+    <color name="circle_yellow">#4cfed91c</color>
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <!--
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=36:67:B9:94:C9:94:4F:9C:C5:93:34:C4:59:03:F7:E6:F3:E8:31:F6%3Bcom.openforce.activity
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    36:67:B9:94:C9:94:4F:9C:C5:93:34:C4:59:03:F7:E6:F3:E8:31:F6
+
+    SHA-1 certificate fingerprint:
+    36:67:B9:94:C9:94:4F:9C:C5:93:34:C4:59:03:F7:E6:F3:E8:31:F6
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAQ-4nRT0MezdlZK8HKL3iAkzuF78XnYMs</string>
+    <string name="google_maps_static_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDSzXfOJqH00oTd2awzFJKmOqSBrtQ-T54</string>
+
+    <string name="google_maps_new_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAoXFE434vqOPc1p8-Nt1GVz6aGUE4rKYs</string>
+
+    <string name="google_maps_search_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD0KPdQfstIY9QMPlGL37KFE_pbLO0lXyc</string>
+
+    <string name="google_maps_place_search_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD0KPdQfstIY9QMPlGL37KFE_pbLO0lXyc</string>
+
+</resources>

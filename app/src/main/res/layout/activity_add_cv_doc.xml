@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddCvDocActivity">
+
+    <RelativeLayout
+        android:id="@+id/cPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+
+        android:tint="@color/white"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:text="Add CV document"
+        />
+
+        <RelativeLayout
+
+            android:background="@drawable/cv_white_bg"
+            android:layout_marginBottom="160dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="90dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_camera"
+                android:background="@drawable/circular_white_bg"
+                android:layout_centerInParent="true"
+                android:layout_width="62dp"
+                android:layout_height="62dp">
+                <ImageView
+                    android:id="@+id/img_camera"
+                    android:tint="@color/black"
+                    android:src="@drawable/camera_ic"
+                    android:layout_centerInParent="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_image"
+                android:background="#232121"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:layout_width="71dp"
+                android:layout_height="89dp">
+
+            </RelativeLayout>
+            <ImageView
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:scaleType="fitXY"
+                android:id="@+id/cv_img"
+                android:layout_height="89dp"
+                android:layout_width="71dp"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_cv_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/blue"
+        android:layout_gravity="center"
+        />
+</RelativeLayout>

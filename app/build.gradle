@@ -1,0 +1,151 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.openforce"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 111
+        versionName "0.1.11"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            multiDexEnabled true
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules-debug.pro'
+        }
+    }
+
+    flavorDimensions 'env'
+
+    productFlavors {
+        staging {
+            buildConfigField "String", "NAME_OF_FIELD", "\"VALUE\""
+            applicationIdSuffix ".debug"
+            dimension "env"
+        }
+
+        prod {
+            dimension "env"
+        }
+    }
+
+    buildToolsVersion = '29.0.3'
+
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+
+    // Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Firebase
+    implementation('com.google.firebase:firebase-core:16.0.7')
+    implementation('com.google.firebase:firebase-firestore:18.0.1')
+    implementation('com.google.firebase:firebase-auth:16.1.0')
+    implementation('com.google.firebase:firebase-functions:16.1.3')
+    implementation('com.google.firebase:firebase-messaging:17.3.4')
+
+    // Secure Shared preferences
+    implementation 'com.scottyab:secure-preferences-lib:0.1.4'
+    implementation 'com.github.AndreaCioccarelli:CryptoPrefs:1.2.0.2'
+
+    // google
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation "com.google.android.gms:play-services-location:16.0.0"
+    implementation 'com.google.android.libraries.places:places:1.0.0'
+//    implementation 'com.google.android.libraries.places:places-compat:2.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+
+    // stream
+    implementation 'com.annimon:stream:1.2.1'
+
+    // progress
+    implementation 'com.github.imaNNeoFighT:StepBarView:1.0.3.2'
+
+    // Time api
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.0'
+
+    // Spinner
+    implementation 'com.github.santalu:respinner:1.0.5'
+
+    // Images
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Worker
+    implementation "android.arch.work:work-runtime:1.0.0"
+
+    // gson//
+//    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Cloudinary
+    implementation(group: 'com.cloudinary', name: 'cloudinary-android', version: '1.25.0')
+
+//    implementation 'com.google.android.gms:play-services-places:16.0.0'
+    implementation 'com.android.support:cardview-v7:29.0.0'
+    // fabric
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.6@aar') {
+        transitive = true;
+    }
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.2-alpha01'
+
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    configurations {
+        all*.exclude group: 'com.google.code.gson'
+    }
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation files('libs/stripe-java-10.4.0.jar')
+    implementation files('libs/gson-2.2.2.jar')
+    implementation 'com.stripe:stripe-android:9.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    //
+}
+
+apply plugin: 'com.google.gms.google-services'
