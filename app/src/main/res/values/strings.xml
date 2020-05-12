@@ -141,7 +141,7 @@
     <string name="error_password_not_good">Password must be at least 8 chars, contains 1 digit, 1 lowercase and 1 uppercase char</string>
     <string name="picking_role">Picking your role and defining your skill level will tailor your job results</string>
     <string name="most_wanted_jobs">MOST WANTED JOBS</string>
-
+<!---->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="confirm_transfer">Confirm Transfer</string>
