@@ -75,7 +75,7 @@
                 style="@style/Label.SansSerif"
                 android:textColor="#99ffffff"
                 android:textSize="12sp"
-                android:text="Snap a picture of your CV and it instantly"/>
+                android:text="Snap a picture of your CV and add it instantly"/>
         </LinearLayout>
 
         <LinearLayout

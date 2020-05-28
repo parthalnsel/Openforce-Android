@@ -54,10 +54,10 @@
     <string name="secure_account">Secure your account</string>
     <string name="register_phone_number">Register phone number</string>
     <string name="need_phone_number">We need your phone number to allow you to chat with employers</string>
-    <string name="pin_seemlessly">This PIN will be user seemlessly log you in</string>
+    <string name="pin_seemlessly">This PIN will be user seamlessly log you in</string>
     <string name="set_login_pin">Set a log in PIN</string>
     <string name="add_phone_number">Add phone number</string>
-    <string name="increase_your_account_sec">Increase your account security by verifying your phone number (i.e.+91XXXXXXXXXX)</string>
+    <string name="increase_your_account_sec">Increase your account security by verifying your phone number (i.e.+44XXXXXXXXXX)</string>
     <string name="hint_phone_number">Enter phone number</string>
     <string name="next">Next</string>
     <string name="invalid_number">Please provide a valid UK phone number</string>
