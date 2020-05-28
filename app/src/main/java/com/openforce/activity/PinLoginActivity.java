@@ -1,11 +1,14 @@
 package com.openforce.activity;
 
+import android.annotation.TargetApi;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +43,7 @@ public class PinLoginActivity extends BaseActivity implements PinFragment.PinFra
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin_login);
+
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O){
             disableAutofill();
         }else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.P){
@@ -99,7 +103,7 @@ public class PinLoginActivity extends BaseActivity implements PinFragment.PinFra
     private void refreshUserInfo() {
 
     }
-    
+
     @TargetApi(Build.VERSION_CODES.Q)
     private void disableAutofillForQ() {
         getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
@@ -114,8 +118,6 @@ public class PinLoginActivity extends BaseActivity implements PinFragment.PinFra
     private void disableAutofillForP() {
         getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
     }
-
-
 
     @Override
     public void onBackClicked() {
