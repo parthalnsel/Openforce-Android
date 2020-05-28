@@ -1,7 +1,9 @@
 package com.openforce.fragments;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatEditText;
@@ -63,6 +65,7 @@ public class PinFragment extends Fragment implements PinTextWatcher.PinCallbacks
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q){
             disableAutofillForQ();
         }
+
         initView(view);
         return view;
     }
@@ -126,7 +129,8 @@ public class PinFragment extends Fragment implements PinTextWatcher.PinCallbacks
 
         void onBackClicked();
     }
-     @TargetApi(Build.VERSION_CODES.Q)
+
+    @TargetApi(Build.VERSION_CODES.Q)
     private void disableAutofillForQ() {
         getActivity().getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
     }
