@@ -1,7 +1,9 @@
 package com.openforce.fragments;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatEditText;
@@ -55,6 +57,15 @@ public class PinFragment extends Fragment implements PinTextWatcher.PinCallbacks
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pin, container, false);
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O){
+            disableAutofill();
+        }else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.P){
+            disableAutofillForP();
+        }else
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q){
+            disableAutofillForQ();
+        }
+
         initView(view);
         return view;
     }
@@ -117,5 +128,20 @@ public class PinFragment extends Fragment implements PinTextWatcher.PinCallbacks
         void onPinComplete(String pin);
 
         void onBackClicked();
+    }
+
+    @TargetApi(Build.VERSION_CODES.Q)
+    private void disableAutofillForQ() {
+        getActivity().getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
+    }
+
+    @TargetApi(Build.VERSION_CODES.O)
+    private void disableAutofill() {
+        getActivity().getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
+    }
+
+    @TargetApi(Build.VERSION_CODES.P)
+    private void disableAutofillForP() {
+        getActivity().getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
     }
 }

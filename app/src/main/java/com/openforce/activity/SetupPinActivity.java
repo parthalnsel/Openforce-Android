@@ -1,9 +1,13 @@
 package com.openforce.activity;
 
+import android.annotation.TargetApi;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.Nullable;
 
 import com.openforce.R;
@@ -23,6 +27,17 @@ public class SetupPinActivity extends BaseActivity implements PinFragment.PinFra
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_pin);
+
+
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O){
+            disableAutofill();
+        }else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.P){
+            disableAutofillForP();
+        }else
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q){
+            disableAutofillForQ();
+        }
+
         PinFragment pinFragment = PinFragment.newInstance(getString(R.string.set_login_pin), true);
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.main_content, pinFragment).commit();
@@ -46,4 +61,21 @@ public class SetupPinActivity extends BaseActivity implements PinFragment.PinFra
     public void onBackClicked() {
         finish();
     }
+
+
+    @TargetApi(Build.VERSION_CODES.Q)
+    private void disableAutofillForQ() {
+        getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
+    }
+
+    @TargetApi(Build.VERSION_CODES.O)
+    private void disableAutofill() {
+        getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
+    }
+
+    @TargetApi(Build.VERSION_CODES.P)
+    private void disableAutofillForP() {
+        getWindow().getDecorView().setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
+    }
+
 }

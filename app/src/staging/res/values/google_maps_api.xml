@@ -21,7 +21,6 @@
     -->
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB2G0ju7f8Eff_z-71-fPySr7yFWO2gy98</string>
     <string name="google_maps_static_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB8zsVhllcu62bJaxjdLY_UFcGLkf-bDCo</string>
-
     <string name="google_maps_new_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAoXFE434vqOPc1p8-Nt1GVz6aGUE4rKYs</string>
 
     <string name="google_maps_search_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD0KPdQfstIY9QMPlGL37KFE_pbLO0lXyc</string>
